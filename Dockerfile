@@ -17,8 +17,8 @@ RUN xz -d Python-3.6.6.tar.xz && tar xvf Python-3.6.6.tar && cd Python-3.6.6 && 
 
 # 3. 复制代码
 RUN mkdir -p /var/www/
+WORKDIR /var/www/CMDB/
 ADD . /var/www/CMDB/
-#WORKDIR /var/www/CMDB/
 
 # 4. 安装pip依赖
 RUN pip3 install --upgrade pip -i https://pypi.mirrors.ustc.edu.cn/simple/
