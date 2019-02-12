@@ -18,8 +18,8 @@ ADD . /var/www/CMDB/
 WORKDIR /var/www/CMDB/
 
 # 4. 安装pip依赖
-RUN pip3 install --user --upgrade pip
-RUN pip3 install -r requirements.txt
+RUN pip3 install --upgrade pip -i https://pypi.mirrors.ustc.edu.cn/simple/
+RUN pip3 install -r requirements.txt -i https://pypi.mirrors.ustc.edu.cn/simple/
 
 # 5. 数据初始化
 # RUN python3 /var/www/CMDB/manage.py makemigrations
